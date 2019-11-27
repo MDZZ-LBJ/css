@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box{
+            width:300px;
+            height: 300px;
+            border: 1px solid gray;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+
+
+        }
+
+
+        .box div{
+            background: red;
+            border: 1px black solid;
+            grid-row-start:2; /* 横向起始为2的位置 */
+            grid-row-end:3;  /*  横向结束为3的位置 */
+
+            grid-column-start:2; /* 纵向起始为2的位置 */
+            grid-column-end:3;  /*  纵向结束为3的位置 */
+
+            /* 表示从纵向从起始位置开始 占两个
+               grid-column-end:span 2;
+            */
+
+            /*
+            简写 / 之前为起始位置 之后为结束位置
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            */
+
+        }
+    </style>
+
+</head>
+<body>
+<!--
+  网格中最左边为1 往右依次类推
+  网格中最上边为1 往下依次类推
+
+  grid-column-start 纵向起始位置
+  grid-column-end 纵向结束位置
+
+  grid-row-start 横向起始位置
+  grid-row-end 横向结束位置
+
+  当加上span关键字时不表示结束位置 表示占的个数
+
+  grid-column 是 grid-column-start , grid-column-end的缩写
+  grid-row 是 grid-row-start , grid-row-end的缩写
+
+-->
+
+<div class="box">
+    <div>1</div>
+
+</div>
+
+</body>
+</html>

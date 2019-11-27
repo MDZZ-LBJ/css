@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box{
+            width:500px;
+            height: 500px;
+            border: 1px solid gray;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+
+            justify-content: start;
+            align-content:end
+
+
+            /*
+              简写 place-content: 纵 横 ;
+              place-content: start end;
+            */
+        }
+
+
+        .box div{
+            background: red;
+            border: 1px black solid;
+        }
+    </style>
+
+</head>
+<body>
+  <!--
+
+  -content 表示网格中每个格子针对整个网格的呈现方式
+
+  justify-content指定了网格元素的水平分布方式
+  align-content指定了网格元素的垂直分布方式
+
+  place-content 是justify-content，align-content的缩写
+
+  取值： stretch 默认值 拉伸 即水平或竖直填充
+         start   左侧或顶部对齐 根据内容撑开
+         end     右侧或底部对齐 根据内容撑开
+         center  水平或垂直居中对齐 根据内容撑开
+         space-between 两端对齐  根据内容撑开
+         space-around  享有独立不重叠空白空间  根据内容撑开
+         space-evenly  平均分配空白空间   根据内容撑开
+  -->
+
+  <div class="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+  </div>
+
+</body>
+</html>

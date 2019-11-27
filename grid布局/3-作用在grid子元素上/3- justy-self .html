@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box{
+            width:300px;
+            height: 300px;
+            border: 1px solid gray;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+        }
+
+
+        .box div{
+            background: red;
+            border: 1px black solid;
+        }
+        .box div:nth-child(2){
+            justify-self:start;
+            align-self:end;
+
+            /*
+             简写 place-self: 纵 横 ;
+              place-self: end start ;
+            */
+        }
+    </style>
+
+</head>
+<body>
+<!--
+
+ justify-self和作用于grid父级的justify-item属性一样
+ 只不过那个是作用于全部 而justify-self作用于单独每个
+
+-->
+
+<div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+
+</div>
+
+</body>
+</html>

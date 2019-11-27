@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:500px;
+            height: 500px;
+            border: 1px solid gray;
+            /* 网格布局 */
+            display: grid;
+
+            /* 三行 有多少数值就多少行 第一行高200px， 第二行高自适应，第三行高25%  */
+            grid-template-rows: 200px auto 25%;
+            /* 四列 有多少数值就多少列  第一列宽100px 第二列宽100px .... */
+            grid-template-columns: 100px 100px 200px 100px;
+
+
+            /*
+               fr单位按比例分配  相当于flex：1 只有当每行(列)的fr之和>=1时 才会充满容器
+               例如：grid-template-rows: 0.1fr 0.1fr 0.1fr 你会发现网格宽度只有0.1+0.1+0.1=30%
+            */
+           /* grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 2fr 1fr;*/
+        }
+    </style>
+</head>
+<body>
+
+<!--
+    grid-template-columns , grid-template-rows
+    这两个属性对网格进行横纵划分 形成二维布局 单位可以是像素 百分比 以及fr
+
+    有时候，我们网格的划分是很规律的，如果需要添加多个横纵网格时，可以利用
+    repeat()语法进行简化操作,但是每个格子宽或高大小要相同
+    grid-template-rows: repeat(3,1fr) 代表重复3次 每个格子高1/3 即33.3%
+
+
+-->
+
+<div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+</div>
+
+
+</body>
+</html>

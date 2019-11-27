@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box{
+            width:300px;
+            height: 300px;
+            border: 1px solid gray;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+        }
+
+
+        .box div{
+            background: red;
+            border: 1px black solid;
+            grid-area: 3 / 2 / 4 / 4
+
+
+        }
+    </style>
+
+</head>
+<body>
+<!--
+ grid-area作用grid父级时定义将哪些网格合并在一起 指定名字
+ grid-area作用在grid子项上时可以使用位置 呈现子元素位置
+
+ grid-area: 横向起始位置 / 纵向起始位置 / 横向结束位置 / 横向结束位置
+
+
+
+-->
+
+<div class="box">
+    <div>1</div>
+
+</div>
+
+</body>
+</html>

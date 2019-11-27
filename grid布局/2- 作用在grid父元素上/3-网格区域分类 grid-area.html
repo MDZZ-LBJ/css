@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid gray;
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: /*  划分区域 名字相同的表示属于同一个类 名字随便取 */
+                                 /*  注意不能出现特俗图形 必须是矩形  */
+                                 "a1 a1 a1"
+                                 "a2 a2 a3"
+                                 "a2 a2 a3";
+            /* 使用grid-template复合写法
+               右侧竖直fr表示占的行比例 下面的fr表示占的列比例 注意写列时前面要加上 /
+             grid-template:
+                    "a1 a1 a1" 1fr
+                    "a2 a2 a3" 1fr
+                    "a2 a2 a3" 1fr
+                    /1fr 1fr 1fr
+
+            */
+
+          }
+         .box div{
+             background: red;
+             border: 1px black solid;
+         }
+         .box div:nth-child(1){
+             grid-area: a1;  /* 表示第一个div使用a1这个类*/
+         }
+         .box div:nth-child(2){
+             grid-area: a2;  /* 表示第二个div使用a2这个类*/
+         }
+         .box div:nth-child(3){
+             grid-area: a3;  /* 表示第三个div使用a3这个类*/
+         }
+    </style>
+
+</head>
+<body>
+
+<!--
+ grid-template-areas,grid-template
+
+ area是区域的意思，grid-template-areas就是给网格划分区域，
+ 此时grid子项只要使用grid-area属性指定其属于哪个区域
+ 定义将哪些网格合并在一起 指定名字
+
+ grid-template是grid-template-columns , grid-template-rows和grid-template-areas的缩写
+
+-->
+
+<div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+
+
+</body>
+</html>
